@@ -1,0 +1,147 @@
+.nav-header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+    background-color: rgb(88, 129, 87);
+    background-size: cover;
+    background-position: center;
+    border-color: rgb(255, 255, 255);
+    border-width: 0.1rem;
+    border-top-width: 0rem;
+    border-style: solid;
+    border-bottom-left-radius: 1rem; 
+    transition: transform 0.5s ease-in-out, height 0.5s ease-in-out;
+    
+}
+
+.nav-header.scrolled{
+    transform: translateX(calc(100% - 8.0rem));
+}
+
+.nav-header.hovered {
+    transform: translateX(0); 
+}
+
+
+.nav-header .logo{
+    display: flex; 
+    align-items: center;
+    gap: 1rem; 
+    
+}
+
+.nav-header .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer; /* Apply cursor effect to the logo */
+}
+.nav-header .logo img {
+
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+    display: block; 
+    filter: invert(100%) /* This will invert the color of the image, making our black SVG, white */
+}
+
+.nav-header .logo h1{
+    font-size: 1.5rem;
+}
+
+
+.nav-header .nav-links{
+    padding: 1rem;
+    display: flex;
+    font-weight: 600; /* This will make the font bold */
+   
+    
+}
+
+.nav-header .nav-links li{
+    padding: 0 1rem;
+}
+
+.nav-header .nav-links a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (max-width: 700px){
+    
+    
+
+    /*.nav-header .nav-links{
+        display: none;
+    }
+
+    .nav-header .logo h1{
+        display: none;
+    }*/
+
+
+    .nav-header {
+        border-radius: 2rem;
+        top: 0; /* This will make the top property not apply to the navbar */
+        height: 5rem;
+        width: 100%; /* Ensure the navbar takes the full width */
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        border-top-width: 0.1rem;
+    }
+
+
+    .nav-header .nav-links {
+        display: none;
+        opacity: 0;
+    }
+
+    .nav-header.expanded {
+        
+        height: 100vh; /* Expand to full screen height */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .nav-header.expanded .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 1; /* Show the links when expanded */
+        transition-delay: 0.5s; /* Delay the transition to match the navbar expansion */
+        transition-delay: 0.5s;
+        transition: height 0.5s ease-in-out, transform 0.5s ease-in-out;
+        
+    }
+
+    .nav-header.expanded .nav-links li {
+        padding: 1rem 0;
+    }
+
+    .nav-header .logo {
+        display: flex;
+        transition: height 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .nav-header .logo img {
+        transition: height 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .nav-header .logo h1 {
+        display: none;
+    }
+
+    .nav-header.scrolled {
+        justify-content: space-between; /* Ensure the logo remains visible when scrolled */
+    }
+
+    
+}
