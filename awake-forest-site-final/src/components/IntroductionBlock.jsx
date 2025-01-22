@@ -1,6 +1,7 @@
 import React from 'react'
 import './IntroductionBlockStyles.css'
 import Meditation from '../assets/meditation-relaxation-calm-meditating-spirituality-tranquility-concentration-svgrepo-com.svg'
+import { Link } from 'react-router-dom'
 
 const IntroductionBlock = () => {
   return (
@@ -16,8 +17,10 @@ const IntroductionBlock = () => {
           physical health. Whether you're new to meditation or have an established 
           practice, Awake Forest welcomes all students interested in exploring and 
           nurturing their well-being. </p>
-      <button> Learn More </button>
-
+        <Link to = '/about'>
+          <button>Learn More</button>
+        </Link>
+  
       </div>
     </div>
   )

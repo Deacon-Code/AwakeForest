@@ -6,8 +6,9 @@ const Video = () =>
     {
   return (
     <div className="video-container">
+        <h1> Welcome to Awake Forest! </h1>
         <video autoPlay loop muted id="video">
-        <source src={vidForAwake} type="video/mp4" />
+          <source src={vidForAwake} type="video/mp4" />
       </video>
     </div>
   )
