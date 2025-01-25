@@ -1,0 +1,36 @@
+.most-recent-post {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .most-recent-post h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .post {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 300px;
+  }
+  
+  .post img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .caption {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
