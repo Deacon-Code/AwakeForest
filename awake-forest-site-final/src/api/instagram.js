@@ -1,4 +1,4 @@
-// /api/instagram.js
+// /api/instagram.jsx
 
 const fetch = require('node-fetch'); // Import node-fetch to make HTTP requests
 
