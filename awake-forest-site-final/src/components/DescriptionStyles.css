@@ -1,0 +1,41 @@
+.Description-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-rows: auto;
+    overflow: hidden;
+    background-color: rgb(240, 255, 244);
+    padding: 1rem;
+}
+
+.Description-container .Description-text{
+    grid-column: 1; /* Place the image in the first column */
+    grid-row: 1; /* Place the image in the first row */
+    color: #ffffff;
+    text-align: center;
+    overflow: ellipsis;
+    background-color:  rgb(88, 129, 87);
+    border-radius: 1rem;
+    padding: 1rem;
+    align-self: top;
+}
+
+.Description-container .Description-image {
+    grid-column: 2; 
+    grid-row: 1; 
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    object-fit: cover; 
+    border-radius: 1rem; 
+    overflow: hidden; 
+    height: 35rem;
+    align-self: start;
+    position: relative;
+    margin-top: 20rem;
+}
+

@@ -3,10 +3,10 @@ import "./GenericProjectsHeaderStyles.css";
 
 export class GenericProjectsHeader extends Component {
   render() {
-    // Destructure props for easier access
+    
     const { heading, text, backgroundImage } = this.props;
 
-    // Set the background image style
+  
     const headerStyle = {
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: "cover",
