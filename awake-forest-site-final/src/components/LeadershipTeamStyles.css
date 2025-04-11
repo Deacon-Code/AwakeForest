@@ -40,3 +40,10 @@
 }
 
 
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .leadership-team-container .leadership-team-grid {
+        grid-template-columns: 1fr; /* Stack cards in a single column */
+        grid-gap: 1.5rem; /* Add more spacing between stacked cards */
+    }
+}

@@ -1,0 +1,75 @@
+/* Container for the form */
+form {
+    max-width: 500px; /* Limit the width of the form */
+    margin: 2rem auto; /* Center the form with vertical spacing */
+    padding: 1.5rem;
+    background-color: #f9f9f9; /* Light background for the form */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Input and textarea fields */
+  input,
+  textarea {
+    width: 100%; /* Full width */
+    padding: 0.75rem; /* Add padding for better usability */
+    margin-bottom: 1rem; /* Space between fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Readable font size */
+    font-family: Arial, sans-serif; /* Consistent font */
+    box-sizing: border-box; /* Include padding and border in width */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth focus effect */
+  }
+  
+  /* Focus state for input and textarea */
+  input:focus,
+  textarea:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Subtle blue glow */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Submit button */
+  button {
+    display: inline-block;
+    width: 100%; /* Full width button */
+    padding: 0.75rem;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth hover effect */
+  }
+  
+  /* Hover and active states for button */
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  button:active {
+    transform: scale(0.98); /* Slightly shrink on click */
+  }
+  
+  /* Status message */
+  p {
+    margin-top: 1rem; /* Space above the status message */
+    font-size: 0.9rem;
+    color: #555; /* Medium gray text */
+    text-align: center;
+  }
+  
+  /* Success message */
+  p:contains("Sent successfully!") {
+    color: #28a745; /* Green for success */
+  }
+  
+  /* Error message */
+  p:contains("Something went wrong.") {
+    color: #dc3545; /* Red for error */
+  }

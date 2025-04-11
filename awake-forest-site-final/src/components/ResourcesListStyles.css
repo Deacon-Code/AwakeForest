@@ -1,13 +1,115 @@
 .resources-list-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.resources-list-container .resources-list {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(240, 255, 244); /* Light greenish background */
+  padding: 2rem; /* Add more padding for spacing */
+  color: black;
+}
+
+.resrources-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Full width of the container */
+  max-width: 1200px; /* Limit the maximum width for larger screens */
+  
+}
+
+.resource-item {
+  display: flex;
+  flex-direction: row; /* Align image and text side by side */
+  align-items: center;
+  background-color: white;
+  border: 1px solid #dcdcdc; /* Light gray border */
+  border-radius: 1rem;
+  margin-bottom: 1.5rem; /* Space between items */
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for resource items */
+.resource-item:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.resource-img-container {
+  flex: 0 0 250px; /* Fixed width for the image container */
+  overflow: hidden;
+  border-radius: 0.5rem; /* Rounded corners for the image container */
+  margin-right: 1rem; /* Space between text and image */
+  flex-shrink: 0; /* Prevent the image container from shrinking */
+  background-color: #f0f0f0; /* Optional: Add a background color for empty space */
+}
+
+.resource-image {
+  width: 100%; /* Fill the container width */
+  height: 100%; /* Fill the container height */
+  object-fit: cover; /* Maintain aspect ratio and fill the container */
+  border-radius: 0.5rem; /* Match the container's rounded corners */
+}
+
+.resource-text {
+  flex: 1; /* Take up the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align text at the top */
+  text-align: left; /* Ensure text is aligned to the left */
+}
+
+/* Resource title */
+.resource-text h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0; /* Add spacing below the title */
+  color: #333; /* Dark gray for readability */
+}
+
+/* Resource description */
+.resource-text p {
+  font-size: 1rem;
+  margin: 0 0 1rem 0; /* Add spacing below the description */
+  color: #555; /* Medium gray for less emphasis */
+  line-height: 1.5;
+}
+
+/* Read More link */
+.resource-text a {
+  font-size: 1rem;
+  color: #588157; /* Greenish color for the link */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.resource-text a:hover {
+  color: #3a5a40; /* Darker green on hover */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .resource-item {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: flex-start;
+  }
+
+  .resource-img-container {
+    width: 100%; /* Full width for the image container */
+    aspect-ratio: 1 / 1; /* Maintain a 3:4 aspect ratio */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 1rem; /* Add spacing below the image */
+  }
+
+  .resource-image {
+    width: 100%; /* Full width for the image */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+  }
+
+  .resource-text {
+    align-items: flex-start; /* Align text to the left */
+    text-align: left; /* Ensure text is aligned to the left */
+  }
 }

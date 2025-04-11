@@ -6,7 +6,7 @@ const Description = () => {
   return (
     <div className = "Description-container">
         <div className = "Description-image">
-            <img src = {Meditating_man}/>
+            <img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Blumenwiese_bei_Obermaiselstein05.jpg/1200px-Blumenwiese_bei_Obermaiselstein05.jpg'/>
         </div>
         <div className = "Description-text">
             <h1> About Awake Forest </h1>
