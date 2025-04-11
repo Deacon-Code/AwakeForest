@@ -1,7 +1,16 @@
-/* Container for the form */
-form {
+/* Container for the contact form */
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgb(240, 255, 244); /* Light greenish background */
+  }
+  
+  /* Form styling */
+  .contact-form {
     max-width: 500px; /* Limit the width of the form */
-    margin: 2rem auto; /* Center the form with vertical spacing */
+    width: 100%; /* Full width for responsiveness */
     padding: 1.5rem;
     background-color: #f9f9f9; /* Light background for the form */
     border: 1px solid #ddd; /* Subtle border */
@@ -10,8 +19,8 @@ form {
   }
   
   /* Input and textarea fields */
-  input,
-  textarea {
+  .contact-input,
+  .contact-textarea {
     width: 100%; /* Full width */
     padding: 0.75rem; /* Add padding for better usability */
     margin-bottom: 1rem; /* Space between fields */
@@ -24,15 +33,15 @@ form {
   }
   
   /* Focus state for input and textarea */
-  input:focus,
-  textarea:focus {
+  .contact-input:focus,
+  .contact-textarea:focus {
     border-color: #007bff; /* Blue border on focus */
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Subtle blue glow */
     outline: none; /* Remove default outline */
   }
   
   /* Submit button */
-  button {
+  .contact-button {
     display: inline-block;
     width: 100%; /* Full width button */
     padding: 0.75rem;
@@ -48,16 +57,16 @@ form {
   }
   
   /* Hover and active states for button */
-  button:hover {
+  .contact-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
   }
   
-  button:active {
+  .contact-button:active {
     transform: scale(0.98); /* Slightly shrink on click */
   }
   
   /* Status message */
-  p {
+  .contact-status {
     margin-top: 1rem; /* Space above the status message */
     font-size: 0.9rem;
     color: #555; /* Medium gray text */
@@ -65,11 +74,11 @@ form {
   }
   
   /* Success message */
-  p:contains("Sent successfully!") {
+  .contact-status:contains("Sent successfully!") {
     color: #28a745; /* Green for success */
   }
   
   /* Error message */
-  p:contains("Something went wrong.") {
+  .contact-status:contains("Something went wrong.") {
     color: #dc3545; /* Red for error */
   }

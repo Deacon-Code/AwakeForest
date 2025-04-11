@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./ContactFormStyles.css"; 
+import "./ContactFormStyles.css";
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -27,38 +27,40 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-      <input
-        className="w-full p-2 border rounded"
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        value={form.name}
-        onChange={handleChange}
-        required
-      />
-      <input
-        className="w-full p-2 border rounded"
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        value={form.email}
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        className="w-full p-2 border rounded"
-        name="message"
-        rows="5"
-        placeholder="Your Message"
-        value={form.message}
-        onChange={handleChange}
-        required
-      />
-      <button className="bg-blue-600 text-white px-4 py-2 rounded" type="submit">
-        Send
-      </button>
-      <p>{status}</p>
-    </form>
+    <div className="contact-form-container">
+      <form onSubmit={handleSubmit} className="contact-form">
+        <input
+          className="contact-input"
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={form.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          className="contact-input"
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={form.email}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          className="contact-textarea"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          value={form.message}
+          onChange={handleChange}
+          required
+        />
+        <button className="contact-button" type="submit">
+          Send
+        </button>
+        <p className="contact-status">{status}</p>
+      </form>
+    </div>
   );
 }
