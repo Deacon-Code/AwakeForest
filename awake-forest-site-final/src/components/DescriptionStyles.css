@@ -30,12 +30,14 @@
     width: 100%; 
     height: auto; 
     max-width: 100%; 
-    object-fit: cover; 
+    object-fit:  contain;
     border-radius: 1rem; 
     overflow: hidden; 
     height: 35rem;
     align-self: start;
     position: relative;
-    margin-top: 20rem;
+    margin-top: 0rem;
+    aspect-ratio: 4/3; /* Maintain a 4:3 aspect ratio */
+
 }
 

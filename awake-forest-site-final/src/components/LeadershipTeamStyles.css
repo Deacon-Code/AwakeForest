@@ -1,0 +1,42 @@
+.leadership-team-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 255, 244);
+    padding: 1rem;
+    color: black;
+    background-image:  url('../assets/llleaves.svg');
+    
+}
+
+.leadership-team-container .leadership-team-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; 
+    grid-gap: 1rem;
+    width: 100%;
+}
+
+.leadership-team-container .leadership-team-grid .team-member-card{
+    background-color: rgba(88, 129, 87, 0.3);
+    color: black;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.leadership-team-container .leadership-team-grid .team-member-card .team-member-image{
+    width: 100%;
+    height: auto;
+    max-width: 10rem;
+    object-fit: cover;
+    border-radius: 10rem;
+    overflow: hidden;
+    height: 10rem;
+    position: relative;
+}
+
+

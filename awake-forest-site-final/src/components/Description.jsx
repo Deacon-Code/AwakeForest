@@ -1,11 +1,12 @@
 import React from 'react'
 import './DescriptionStyles.css'
+import Meditating_man from '../assets/young-man-relaxing-and-meditating-in-the-field-free-video.jpg'
 
 const Description = () => {
   return (
     <div className = "Description-container">
         <div className = "Description-image">
-            <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Blumenwiese_bei_Obermaiselstein05.jpg/1200px-Blumenwiese_bei_Obermaiselstein05.jpg" alt = "Flower meadow"/>
+            <img src = {Meditating_man}/>
         </div>
         <div className = "Description-text">
             <h1> About Awake Forest </h1>

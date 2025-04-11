@@ -1,0 +1,54 @@
+.accordian-container {
+    
+    padding-top: 0.5rem;
+    background-color: rgba(88, 129, 87, 1)
+  }
+  
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    transition:  0.3s ease;
+    border-radius: 0rem;
+    
+  }
+  
+  
+  .accordion.active{
+    background-color: #ccc;
+  }
+  .accordion:hover {
+    background-color: #ccc;
+}
+  
+  .panel {
+    padding: 0 1rem;
+    background-color: white;
+    overflow: hidden;
+    color:black;
+    overflow: 'hidden';
+    transition: 0.7s ease;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .panel.active{
+    max-height: 10rem;
+    opacity: 1;
+    
+  }
+
+  .accordian-container h1 {
+    text-align: center; 
+
+    
+}
+
+ 
+  
