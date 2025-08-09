@@ -39,7 +39,7 @@
   }
 
   .panel.active{
-    max-height: 10rem;
+    max-height: 100rem;
     opacity: 1;
     
   }

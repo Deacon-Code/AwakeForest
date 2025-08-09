@@ -48,7 +48,6 @@
     height: 5rem;
     width: 5rem;
     display: block; 
-    filter: invert(100%) /* This will invert the color of the image, making our black SVG, white */
 }
 
 .nav-header .logo h1{

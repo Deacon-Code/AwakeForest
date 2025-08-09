@@ -1,66 +1,25 @@
-import { useState } from "react";
+import React from "react";
 import "./ContactFormStyles.css";
+import { SiGroupme } from "react-icons/si";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-
-    if (res.ok) {
-      setForm({ name: "", email: "", message: "" });
-      setStatus("Sent successfully!");
-    } else {
-      setStatus("Something went wrong.");
-    }
-  };
-
-  return (
-    <div className="contact-form-container">
-      <form onSubmit={handleSubmit} className="contact-form">
-        <input
-          className="contact-input"
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          className="contact-input"
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={form.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          className="contact-textarea"
-          name="message"
-          rows="5"
-          placeholder="Your Message"
-          value={form.message}
-          onChange={handleChange}
-          required
-        />
-        <button className="contact-button" type="submit">
-          Send
-        </button>
-        <p className="contact-status">{status}</p>
-      </form>
-    </div>
-  );
+	return (
+		<div className="contact-container">
+			<div className="contact-content">
+				<h2 className="contact-heading">Get In Touch</h2>
+				<p className="contact-email">
+					Have questions? Email our President at:{" "}
+					<a href="mailto:roseed22@wfu.edu">roseed22@wfu.edu</a>
+				</p>
+				<a
+					href="https://google.com/url?q=https://groupme.com/join_group/102963733/sxTT6DeP&sa=D&source=docs&ust=1754696441191839&usg=AOvVaw0ASJNpKM-oOZb-aey9qmKg"
+					className="groupme-button"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Join our GroupMe">
+					<SiGroupme />
+				</a>
+			</div>
+		</div>
+	);
 }

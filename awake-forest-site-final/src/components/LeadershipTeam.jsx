@@ -1,60 +1,54 @@
-import React from 'react'
-import "./LeadershipTeamStyles.css"; 
+import React from "react";
+import "./LeadershipTeamStyles.css";
 import leaves_background from "../assets/llleaves.svg";
-
+import Francisco_Gallegos from "../assets/leaders/Francisco_Gallegos.jpg";
+import President from "../assets/leaders/President.png";
+import Michelle_Martinkov from "../assets/leaders/Michelle_Martinkov.jpg";
 
 const LeadershipTeam = () => {
-    const teamMembers = [
-        {
-            name: "John Doe",
-            position: "President",
-            image: "https://media.npr.org/assets/img/2012/07/10/walterwhite_wide-24664a3dc903dff3bf3fe17a27996d6a174ee50b.jpg",
-            bio: "John is the president of the organization and has been a leader in the community for over 10 years.",
-            email: "example@hotmail.com"
-        },
-        {
-            name: "Jane Smith",
-            position: "Vice President",
-            image: "https://ew.com/thmb/ShQnSzfrYy-kQVIT7QF3WtZzIA4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/screen-shot-2017-01-11-at-12-24-27-pm-2000-d4c7b26e80d14a49a1a850d0d1fb08e9.jpg",
-            bio: "Jane is the vice president and has a background in environmental science.",
-            email: "example@hotmail.com"
-            
-        },
-        {
-            name: "Alice Johnson",
-            position: "Treasurer",
-            image: "https://upload.wikimedia.org/wikipedia/en/c/c6/Jesse_Pinkman_S5B.png",
-            bio: "Alice is the treasurer and has a degree in finance.",
-            email: "example@hotmail.com"
-        },
-        {
-            name: "Bob Brown",
-            position: "Secretary",
-            image: "https://upload.wikimedia.org/wikipedia/en/3/34/Jimmy_McGill_BCS_S3.png",
-            bio: "Bob is the secretary and has experience in nonprofit management.",
-            email: "example@hotmail.com"
-        }
+	const teamMembers = [
+		{
+			name: "Francisco Gallegos",
+			position: "Faculty Advisor",
+			image: Francisco_Gallegos,
+			bio: "Francisco Gallegos has taught philosophy at WFU since 2018. His work focuses on the politics of emotion, and he has been learning about and practicing mindfulness for about 10 years. He loves conversing with students, and he is especially curious about how mindfulness can serve as a refuge of peace and facilitate positive change at the individual and collective levels.",
+			email: "gallegft@wfu.edu",
+		},
+		{
+			name: "Ethan Rosenberg",
+			position: "President",
+			image: President,
+			bio: "I would be grateful and excited to speak with whomever is reading this right now. Please do not hesitate to reach out for anything at all. With love and care always, EDR",
+			email: "roseed22@wfu.edu",
+		},
+		{
+			name: "Michelle Martinkov",
+			position: "Treasurer/Vice President",
+			image: Michelle_Martinkov,
+			bio: "Michelle loves seeking new experiences and ideas that challenge her perspective and deepen her understanding of herself and the world. Her meditation practice is a form of discipline that calms her mind and keeps her fully present, allowing her to engage in each moment with awareness and intention. Awake Forest is a welcoming community where meditation and open discussions spark new ideas and create lasting connections. The club has shown her the importance of balance and meeting life’s depth with a spirit that’s light, joyful, and a little silly.",
+			email: "martm222@wfu.edu",
+		},
+	];
+	return (
+		<div className="leadership-team-container">
+			<h1>Leadership Team</h1>
+			<div className="leadership-team-grid">
+				{teamMembers.map((member, index) => (
+					<div key={index} className="team-member-card">
+						<img
+							src={member.image}
+							alt={member.name}
+							className="team-member-image"
+						/>
+						<h2>{member.name}</h2>
+						<p>{member.position}</p>
+						<p>{member.bio}</p>
+						<p>{member.email}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	);
+};
 
-        // Add more team members as needed
-    ];
-  return (
-    <div className="leadership-team-container">
-        <h1>Leadership Team</h1>
-        <div className="leadership-team-grid">
-            {teamMembers.map((member, index) => (
-            <div key={index} className="team-member-card">
-                <img src={member.image} alt={member.name} className="team-member-image" />
-                <h2>{member.name}</h2>
-                <p>{member.position}</p>
-                <p>{member.bio}</p>
-                <p>{member.email}</p>
-            </div>
-            ))}
-        </div>
-
-      
-    </div>
-  )
-}
-
-export default LeadershipTeam
+export default LeadershipTeam;

@@ -1,84 +1,85 @@
-/* Container for the contact form */
-.contact-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background-color: rgb(240, 255, 244); /* Light greenish background */
-  }
-  
-  /* Form styling */
-  .contact-form {
-    max-width: 500px; /* Limit the width of the form */
-    width: 100%; /* Full width for responsiveness */
-    padding: 1.5rem;
-    background-color: #f9f9f9; /* Light background for the form */
-    border: 1px solid #ddd; /* Subtle border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-  
-  /* Input and textarea fields */
-  .contact-input,
-  .contact-textarea {
-    width: 100%; /* Full width */
-    padding: 0.75rem; /* Add padding for better usability */
-    margin-bottom: 1rem; /* Space between fields */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 1rem; /* Readable font size */
-    font-family: Arial, sans-serif; /* Consistent font */
-    box-sizing: border-box; /* Include padding and border in width */
-    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth focus effect */
-  }
-  
-  /* Focus state for input and textarea */
-  .contact-input:focus,
-  .contact-textarea:focus {
-    border-color: #007bff; /* Blue border on focus */
-    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Subtle blue glow */
-    outline: none; /* Remove default outline */
-  }
-  
-  /* Submit button */
-  .contact-button {
-    display: inline-block;
-    width: 100%; /* Full width button */
-    padding: 0.75rem;
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    border: none; /* Remove border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth hover effect */
-  }
-  
-  /* Hover and active states for button */
-  .contact-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-  }
-  
-  .contact-button:active {
-    transform: scale(0.98); /* Slightly shrink on click */
-  }
-  
-  /* Status message */
-  .contact-status {
-    margin-top: 1rem; /* Space above the status message */
-    font-size: 0.9rem;
-    color: #555; /* Medium gray text */
-    text-align: center;
-  }
-  
-  /* Success message */
-  .contact-status:contains("Sent successfully!") {
-    color: #28a745; /* Green for success */
-  }
-  
-  /* Error message */
-  .contact-status:contains("Something went wrong.") {
-    color: #dc3545; /* Red for error */
-  }
+.contact-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 2rem;
+  background-color: #f0f7f4; /* A soft, calming green */
+  text-align: center;
+  min-height: 400px;
+  overflow: hidden; /* Ensures pseudo-elements don't overflow */
+}
+
+.contact-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/llleaves.svg'); /* Using a subtle background pattern */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.05; /* Very subtle */
+  z-index: 1;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white card */
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px); /* Frosted glass effect for Safari */
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+}
+
+.contact-heading {
+  font-size: 2.8rem;
+  color: #2c3e50; /* Darker, more professional color */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-email {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 2.5rem;
+}
+
+.contact-email a {
+  color: #3498db; /* A pleasant blue */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-email a:hover {
+  color: #2980b9;
+}
+
+.groupme-button {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+  color: #00aff0; /* GroupMe brand blue */
+  font-size: 150px; /* Adjust size as needed */
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.groupme-button:hover {
+  transform: scale(1.1);
+  color: #008abe; /* Darker blue on hover */
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
+}
+
+.groupme-button:active {
+  transform: scale(1.05);
+}
