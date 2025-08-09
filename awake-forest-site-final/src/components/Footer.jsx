@@ -22,8 +22,9 @@ import { SiGroupme } from "react-icons/si";
 import wave from "../assets/wave-svg.svg";
 
 const Footer = () => {
-	const handleGroupmeClick = useRedirectOnClick("roseed22@wfu.edu");
-	const handleGitHubClick = useRedirectOnClick("https://example.com");
+	const handleGroupmeClick = useRedirectOnClick(
+		"https://google.com/url?q=https://groupme.com/join_group/102963733/sxTT6DeP&sa=D&source=docs&ust=1754696441191839&usg=AOvVaw0ASJNpKM-oOZb-aey9qmKg"
+	);
 
 	return (
 		<div className="footer">
@@ -45,7 +46,7 @@ const Footer = () => {
 								size={20}
 								style={{ color: "#FFFFFF", marginRight: "2rem" }}
 							/>{" "}
-							presidentEmail@gmail.com
+							martm222@wfu.edu
 						</h4>
 					</div>
 					<div className="calendar">
@@ -54,17 +55,9 @@ const Footer = () => {
 								size={20}
 								style={{ color: "#FFFFFF", marginRight: "2rem" }}
 							/>{" "}
-							Random Day from Time - Time
+							Meeting Times subject to change, please look at the GroupMe for up
+							to date information.
 						</h4>
-						<div className="disclaimer">
-							<h4>
-								<IoIosWarning
-									size={30}
-									style={{ color: "#FFFFFF", marginRight: "2rem" }}
-								/>
-								Potential Disclaimer.
-							</h4>
-						</div>
 					</div>
 				</div>
 				<div className="right">
@@ -82,17 +75,6 @@ const Footer = () => {
 					</p>
 					<div className="socials">
 						{
-							<FaInstagram
-								onClick={handleGroupmeClick}
-								size={30}
-								style={{
-									color: "#FFFFFF",
-									marginRight: "1rem",
-									cursor: "pointer",
-								}}
-							/>
-						}
-						{
 							<SiGroupme
 								onClick={handleGroupmeClick}
 								size={30}
@@ -101,12 +83,6 @@ const Footer = () => {
 									marginRight: "1rem",
 									cursor: "pointer",
 								}}
-							/>
-						}
-						{
-							<FaLinkedin
-								size={30}
-								style={{ color: "#FFFFFF", marginRight: "1rem" }}
 							/>
 						}
 					</div>

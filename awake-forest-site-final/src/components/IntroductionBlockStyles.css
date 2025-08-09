@@ -54,3 +54,40 @@
   align-items: center;
   background-color: rgb(88, 129, 87);
 }*/
+
+/* Add near the end */
+
+/* Learn More button */
+.learn-more-btn {
+  background-color: rgb(88,129,87);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  box-shadow: 0 4px 10px -2px rgba(0,0,0,.25);
+  transition: background-color .25s ease, transform .2s ease, box-shadow .25s ease;
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus-visible {
+  background-color: rgb(78,119,77);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px -2px rgba(0,0,0,.32);
+}
+
+.learn-more-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px -2px rgba(0,0,0,.28);
+}
+
+.learn-more-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
