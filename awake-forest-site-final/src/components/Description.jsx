@@ -1,7 +1,7 @@
 import React from "react";
 import "./DescriptionStyles.css";
 import Meditating_man from "../assets/young-man-relaxing-and-meditating-in-the-field-free-video.jpg";
-import Another_community_Pic from "../assets/SharedImages/Another_community_Pic.JPG";
+import Another_community_Pic from "../assets/SharedImages/temp_logo.png";
 const Description = () => {
 	return (
 		<div className="Description-container">
