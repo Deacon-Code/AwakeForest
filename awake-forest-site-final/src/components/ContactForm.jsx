@@ -8,7 +8,7 @@ export default function ContactForm() {
 			<div className="contact-content">
 				<h2 className="contact-heading">Get In Touch</h2>
 				<p className="contact-email">
-					Have questions? Email our President at:{" "}
+					Have questions? Email our President at the following address:{" "}
 					<a href="mailto:roseed22@wfu.edu">roseed22@wfu.edu</a>
 				</p>
 				<a
