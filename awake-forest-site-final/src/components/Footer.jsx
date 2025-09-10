@@ -46,7 +46,7 @@ const Footer = () => {
 								size={20}
 								style={{ color: "#FFFFFF", marginRight: "2rem" }}
 							/>{" "}
-							martm222@wfu.edu
+							awake@wfu.edu
 						</h4>
 					</div>
 					<div className="calendar">
@@ -55,8 +55,6 @@ const Footer = () => {
 								size={20}
 								style={{ color: "#FFFFFF", marginRight: "2rem" }}
 							/>{" "}
-							Meeting Times subject to change, please look at the GroupMe for up
-							to date information.
 						</h4>
 					</div>
 				</div>
