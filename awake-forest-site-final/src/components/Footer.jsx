@@ -36,7 +36,7 @@ const Footer = () => {
 							style={{ color: "#FFFFFF", marginRight: "2rem" }}
 						/>
 						<div>
-							<p>Hall Room #RoomNum</p>
+							<p>Reynolda Hall B007</p>
 							<h4>Wake Forest University</h4>
 						</div>
 					</div>
@@ -55,6 +55,7 @@ const Footer = () => {
 								size={20}
 								style={{ color: "#FFFFFF", marginRight: "2rem" }}
 							/>{" "}
+							Wednesday at 6:30 PM
 						</h4>
 					</div>
 				</div>
