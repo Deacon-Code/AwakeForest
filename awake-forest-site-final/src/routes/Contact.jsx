@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import GenericProjectsHeader from "../components/GenericProjectsHeader";
 import useScrollToTop from "../hooks/useScrollToTop";
 import ContactForm from "../components/ContactForm";
-
+import Tohi_Garden_Pic from "../assets/Hero_Images_shared/Tohi_Garden_Pic.jpeg";
 const Contact = () => {
 	useScrollToTop();
 	return (
@@ -13,7 +13,7 @@ const Contact = () => {
 			<GenericProjectsHeader
 				heading="Contact"
 				text=""
-				backgroundImage="src/assets/Hero_Images_shared/Tohi_Garden_Pic.jpeg"
+				backgroundImage={Tohi_Garden_Pic}
 			/>
 			<ContactForm />
 			<Footer />
